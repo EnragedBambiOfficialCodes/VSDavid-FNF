@@ -654,16 +654,12 @@ class FreeplayState extends MusicBeatState
 				iconsex.velocity.set(new FlxRandom().float(-100, 200), new FlxRandom().float(-100, 250));
 				pussy.push(iconsex);
 			}
-			for (ass in pussy){
-				FlxTween.tween(ass, {x:new FlxRandom().float(-100, 200)}, 0.1, {ease:FlxEase.backIn});
-				FlxTween.tween(ass, {y:new FlxRandom().float(-100, 200)}, 0.1, {ease:FlxEase.backIn});
-			}
 		  }
 		FlxG.camera.shake(0.1, 5, function(){
 			FlxG.camera.fade(FlxColor.WHITE, 1, function() {
 				FlxTween.tween(fuckas, {alpha:1}, 1, {
 					onComplete:function(twn:FlxTween){
-						PlayState.SONG = Song.loadFromJson('dad-battle/dad-battle-hard');
+						PlayState.SONG = Song.loadFromJson('farting-in-a-bathtub/farting-in-a-bathtub-hard');
 						PlayState.storyWeek = 2;
 						LoadingState.loadAndSwitchState(new PlayState());
 					}

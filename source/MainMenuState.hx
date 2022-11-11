@@ -142,6 +142,7 @@ class MainMenuState extends MusicBeatState
 						startDelay: 0.1 + (0.2 * i)
 			   });
 	        });
+			
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
