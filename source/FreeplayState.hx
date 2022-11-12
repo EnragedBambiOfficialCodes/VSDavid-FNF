@@ -659,7 +659,7 @@ class FreeplayState extends MusicBeatState
 			FlxG.camera.fade(FlxColor.WHITE, 1, function() {
 				FlxTween.tween(fuckas, {alpha:1}, 1, {
 					onComplete:function(twn:FlxTween){
-						PlayState.SONG = Song.loadFromJson('farting-in-a-bathtub/farting-in-a-bathtub-hard');
+						PlayState.SONG = Song.loadFromJson('secret/secret-hard');
 						PlayState.storyWeek = 2;
 						LoadingState.loadAndSwitchState(new PlayState());
 					}
