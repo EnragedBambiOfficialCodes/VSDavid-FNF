@@ -661,6 +661,7 @@ class FreeplayState extends MusicBeatState
 					onComplete:function(twn:FlxTween){
 						PlayState.SONG = Song.loadFromJson('secret/secret-hard');
 						PlayState.storyWeek = 2;
+						PlayState.storyDifficulty = 2;
 						LoadingState.loadAndSwitchState(new PlayState());
 					}
 				});

@@ -26,7 +26,7 @@ class CreditsPopupL extends FlxSpriteGroup{
             case 'tutorial' | 'bopeebo' | 'fresh' | 'dad-battle':
                 text.text += 'Composer(s):KawaiSprite\nVisuals:PhantomArcade\nCharting:N/A\nCoder(s):DavidDX, ShadowMario, ninjamuffin99';
                 boxLol.updateHitbox();
-            case 'farting-in-a-bathtub':
+            case 'secret':
                 text.text += 'Composer(s):WillowMakedMusic\nVisuals:DavidDX\nCharting:DavidDX\nCoder(s):DavidDX';
                 boxLol.updateHitbox();
             case 'abuse':

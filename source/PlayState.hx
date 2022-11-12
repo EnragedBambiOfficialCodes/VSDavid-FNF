@@ -2992,6 +2992,19 @@ class PlayState extends MusicBeatState
 				}
 		}
 
+		if(SONG.song.toLowerCase() == 'secret'){
+			playerStrums.forEachAlive(function(u:FlxSprite){
+				u.x -= Math.sin(elapsedTime) * 1.3;
+				u.angle = 60*Math.cos(((elapsedTime*2) + u.ID*2));
+				u.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u.ID*2));
+			});
+			opponentStrums.forEachAlive(function(u1:FlxSprite){
+				u1.x -= Math.sin(elapsedTime) * 1.3;
+				u1.angle = 60*Math.cos(((elapsedTime*2) + u1.ID*2));
+				u1.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u1.ID*2));
+			});
+		}
+
 		
 
 		for(i in 0...notepressarraydata.length)
@@ -3494,7 +3507,7 @@ class PlayState extends MusicBeatState
 	{
 		switch(SONG.song.toLowerCase()){
 			case 'secret':
-					
+				// Makes you die when you press seven!!!
 				health = 0;
 				trace("RESET = True");	
 				doDeathCheck();
