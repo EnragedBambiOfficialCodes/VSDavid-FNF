@@ -2988,6 +2988,11 @@ class PlayState extends MusicBeatState
 							u.angle = 60*Math.cos(((elapsedTime*2) + u.ID*2));
 							u.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u.ID*2));
 						});
+						opponentStrums.forEachAlive(function(u:FlxSprite){
+							u.x += Math.sin(elapsedTime) * 1.3;
+							u.angle = 60*Math.cos(((elapsedTime*2) + u.ID*2));
+							u.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u.ID*2));
+						});
 						
 				}
 		}
@@ -2995,6 +3000,11 @@ class PlayState extends MusicBeatState
 		if(SONG.song.toLowerCase() == 'secret'){
 			playerStrums.forEachAlive(function(u:FlxSprite){
 				u.x -= Math.sin(elapsedTime) * 1.3;
+				u.angle = 60*Math.cos(((elapsedTime*2) + u.ID*2));
+				u.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u.ID*2));
+			});
+			opponentStrums.forEachAlive(function(u:FlxSprite){
+				u.x += Math.sin(elapsedTime) * 1.3;
 				u.angle = 60*Math.cos(((elapsedTime*2) + u.ID*2));
 				u.y = strumLine.y+(20*Math.sin((elapsedTime*2) + u.ID*2));
 			});
@@ -3167,7 +3177,7 @@ class PlayState extends MusicBeatState
 		+ songMisses 
 		+ " • Accuracy: " 
 		+ Highscore.floorDecimal(ratingPercent * 100, 2) 
-		+ ' [' + ratingFC + ']' + ' • Rank: ${ratingName}';
+		+ '% [' + ratingFC + ']' + ' • Rank: ${ratingName}';
 
 		
 		if(cpuControlled){
@@ -3193,8 +3203,8 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.5)),Std.int(FlxMath.lerp(150, iconP1.height, 0.5)));
-		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.5)),Std.int(FlxMath.lerp(150, iconP2.height, 0.5)));
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.6)),Std.int(FlxMath.lerp(150, iconP1.height, 0.6)));
+		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.6)),Std.int(FlxMath.lerp(150, iconP2.height, 0.6)));
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
