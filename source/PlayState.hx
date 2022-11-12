@@ -3664,6 +3664,8 @@ class PlayState extends MusicBeatState
 					boyfriend.specialAnim = true;
 					boyfriend.heyTimer = time;
 				}
+			case 'vineBoom':
+				VINEBOOM();
 
 			case 'Set GF Speed':
 				var value:Int = Std.parseInt(value1);
@@ -5570,6 +5572,17 @@ class PlayState extends MusicBeatState
 		number = Math.round(number)/Math.pow(10, percision);
 		return(number);
 
+	}
+	// trigger vineboom epok
+	public var vineboomspr:FlxSprite;
+	function VINEBOOM(){
+		vineboomspr = new FlxSprite().loadGraphic(Paths.image('vineboom'));
+		vineboomspr.alpha = 1;
+		vineboomspr.screenCenter(X);
+		add(vineboomspr);
+		vineboomspr.cameras = [camHUD];
+		FlxG.sound.play(Paths.sound('vineboom'));
+		FlxTween.tween(vineboomspr, {alpha:0}, 0.5, {ease:FlxEase.quartOut, startDelay: 1});
 	}
 }
 
