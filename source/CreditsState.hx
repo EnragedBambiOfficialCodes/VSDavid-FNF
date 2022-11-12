@@ -82,7 +82,8 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			['Vs DavidDX Team'],
-			['DavidDX',		'daviddx',		'Did everything',								'https://twitter.com/Shadow_Mario_',	'444444'],
+			['DavidDX',		'daviddx',		'Did everything except for music',								'https://twitter.com/Shadow_Mario_',	'444444'],
+			['WillowMakesMusic',		'willow',		'Did the music (coolswag)',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			[''], //Name - Icon name - Description - Link - BG Color
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
